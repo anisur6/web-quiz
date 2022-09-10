@@ -1,12 +1,15 @@
+import React from "react";
+import Header from "./Components/Header";
+import Videos from "./Components/Videos";
+
+
 
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-  
-       <p>hfajksdhfjasdhfjkh</p>
-      </header>
+      <Header/>
+      <Videos/>
     </div>
   );
 }
