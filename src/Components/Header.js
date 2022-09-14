@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navbar, Container} from 'react-bootstrap';
+import {Navbar, Container, Nav} from 'react-bootstrap';
 
 const Header = () => {
     return (
@@ -18,9 +18,15 @@ const Header = () => {
           </Navbar.Brand>
           <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>
-            Signed in as: <a href="#login">Mark Otto</a>
-          </Navbar.Text>
+            
+        <img
+              alt=""
+              src="https://cdn-icons-png.flaticon.com/128/2202/2202112.png"
+              width="30"
+              height="30"
+              className="d-inline-block align-top me-3"
+            />{' '}
+        <Nav.Link className='text-light fw-bold' href="Signup.js">Sign Up</Nav.Link>
         </Navbar.Collapse>
         </Container>
       </Navbar>
