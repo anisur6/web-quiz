@@ -6,11 +6,14 @@ import './global.css'
 import Button from './Button';
 import CheckBox from './CheckBox';
 import signupimage from '../assets/signup.svg';
+import { Container } from 'react-bootstrap';
 
 
 const Signup = () => {
     return (
         <>
+        <Container className='mt-2'>
+
         <h1>Create an Account</h1>
 
         <div className="column">
@@ -25,6 +28,7 @@ const Signup = () => {
         </Form>
         </div>
             
+        </Container>
         </>
     );
 };

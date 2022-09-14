@@ -32,7 +32,7 @@ h4 {
 
 /* videos component */
 .videos {
-    width: 100%;
+    width: 90%;
     display: grid;
     margin: 3rem auto;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
