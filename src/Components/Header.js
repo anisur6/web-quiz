@@ -1,9 +1,23 @@
 import React from 'react';
 import {Navbar, Container, Nav} from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import {Link} from 'react-router-dom';
-
+import auth from '../firebase.init';
+import {signOut} from 'firebase/auth';
+import RequireAuth from './RequireAuth';
 
 const Header = () => {
+
+  const [user, loading, error] = useAuthState(auth);
+
+  const logout = () => {
+    signOut(auth);
+  };
+
+
+
+
+
     return (
         <>
       <Navbar bg="dark" variant="dark" className='p-3'>
@@ -31,9 +45,16 @@ const Header = () => {
               className="d-inline-block align-top me-3"
             />{' '}
             </Link>
+            {
+              user ? <Link onClick={logout} className='text-dark text-decoration-none mx-2 fw-bold bg-warning p-2 rounded-3'>Sign Out</Link>   :  
+              <>
+              <Link to="/signup" className='text-light text-decoration-none mx-2 fw-bold'>Sign Up</Link>  
+              <Link to="/login" className='text-light text-decoration-none mx-2 fw-bold'>Login</Link>
+              </>
+            }
+
+            
        
-        <Link to="/signup" className='text-light text-decoration-none mx-2 fw-bold'>Sign Up</Link>
-        <Link to="/login" className='text-light text-decoration-none mx-2 fw-bold'>Login</Link>
         </Navbar.Collapse>
         </Container>
       </Navbar>

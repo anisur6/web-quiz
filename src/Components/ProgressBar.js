@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './global.css'
 
 const ProgressBar = () => {
@@ -14,12 +15,12 @@ const ProgressBar = () => {
               <div className="progress" style={{width : '20%'}}></div>
             </div>
           </div>
-          <a href="result.html">
+          <Link to="/result" className='text-decoration-none'>
             <button className="button next">
               <span>Next Question</span>
               <span class="material-icons-outlined"> --- </span>
             </button>
-          </a>
+          </Link>
         </div>
         </>
     );

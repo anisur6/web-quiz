@@ -1,12 +1,12 @@
 import React from 'react';
 import './global.css'
 
-const Button = ({children}) => {
+const Button = ({children, className, ...rest}) => {
     return (
         <>
-            <div className="button">
+            <button className="button" {...rest}>
               <span>{children}</span>
-            </div>
+            </button>
         </>
     );
 };
